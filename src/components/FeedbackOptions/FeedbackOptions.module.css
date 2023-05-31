@@ -1,0 +1,11 @@
+.button {
+  display: block;
+  width: 60px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.buttonThumb {
+  display: flex;
+  gap: 15px;
+}
