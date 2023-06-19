@@ -1,4 +1,6 @@
-import css from "./FeedbackOptions.module.css"
+import PropTypes from 'prop-types';
+import css from "./FeedbackOptions.module.css";
+
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     
@@ -9,8 +11,12 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     
     const OptionBtns = options.map((option) => {
         return <button key={option} type="button" className={css.button} name={option} onClick={handelClick}>{option}</button>
-    })
-    
+    })    
     
     return <div className={css.buttonThumb}>{OptionBtns}</div>
+}
+
+FeedbackOptions.propTypes = {
+    options: PropTypes.arrayOf(PropTypes.string),
+    onLeaveFeedback: PropTypes.func,
 }
